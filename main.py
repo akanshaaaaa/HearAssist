@@ -1,8 +1,1 @@
-from flask import Flask
-app = Flask('app', template_folder="templates", static_folder="static")
-
-@app.route('/')
-def hello_world():
-  return 'Hello, World!'
-
-app.run(host='0.0.0.0', port=8080)
+import streamlit as st
