@@ -11,7 +11,10 @@ def hello_world():
   text = request.args.get('text')
   print(text)
   db['text'] = str(db['text']) + " " + text
-  print(db['text'])
+  return render_template('index.html', obj = db['text'])
+
+@app.route('/display', methods = ['GET'])
+def display():
   return render_template('index.html', obj = db['text'])
 
 app.run(host='0.0.0.0', port=8080)
