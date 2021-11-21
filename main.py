@@ -35,4 +35,8 @@ def display():
 def fr():
   return render_template('index.html', obj = translate_text("fr", db['text']))
 
+@app.route('/ge', methods = ['GET'])
+def ge():
+  return render_template('index.html', obj = translate_text("de", db['text']))
+
 app.run(host='0.0.0.0', port=8080)
