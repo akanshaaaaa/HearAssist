@@ -8,6 +8,9 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 Flask = "^2.0.2"
 PyAudio = "^0.2.11"
+nest-asyncio = "^1.5.1"
+replit = "^3.2.4"
+websockets = "^10.1"
 
 [tool.poetry.dev-dependencies]
 

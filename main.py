@@ -4,7 +4,7 @@ from replit import db
 app = Flask('app', template_folder="templates", static_folder="static")
 
 lst = []
-db['text'] = " "
+db['text'] = "hi"
 
 @app.route('/', methods = ['GET'])
 def hello_world():
