@@ -104,6 +104,24 @@
         font-family: montserrat;
         color: White;
       }
+      #ellipse1 {
+        position: absolute;
+        height: 712px;
+        width: 785px;
+        left: 38.39px;
+        top: 230px;
+        border-radius: 0px; 
+        display: none;
+      }
+      #ellipse2 {
+        position: absolute;
+        height: 712px;
+        width: 785px;
+        left: 38.39px;
+        top: 230px;
+        border-radius: 0px; 
+        display: none;
+      }
       @media screen and (max-width: 800px) {
       @font-face {
         font-family: montserrat;
@@ -127,17 +145,17 @@
       #bottomright {
         position: absolute;
         width: 1200.01px;
-        left: -359.71px;
-        top: 1400.92px;
+        left: -321.71px;
+        top: 1350.92px;
         border-radius: 0px;
-        z-index: 5;
+        z-index: 1;
       }
       #circle {
         position: absolute;
         height: 220px;
         width: 224px;
-        left: 1137.5px;
-        top: 380px;
+        left: 430.5px;
+        top: 610px;
         border-radius: 0px;
       }
       #heading {
@@ -193,7 +211,7 @@
       }
       #textbox {
         position: absolute;
-        text-align: left;
+        text-align: center;
         border: none;
         left: 40px;
         width: 790px;
@@ -201,10 +219,28 @@
         background: #708090;
         border-radius: 27.6368px;
         height: 650px;
-        font-size: 16px;
+        font-size: 36px;
         font-family: montserrat;
         color: White;
-        z-index: 1;
+        z-index: 5;
+      }
+      #ellipse1 {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: 158.39px;
+        top: 430px;
+        border-radius: 0px;
+        display: block; 
+      }
+      #ellipse2 {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        left: 158.39px;
+        top: 530px;
+        border-radius: 0px; 
+        display: block;
       }
 }
     </style>
@@ -215,10 +251,12 @@
     <img src = "static/Group 25.png" id="sideimage">
     <img src = "static/Group 181.png" id="circle">
     <img src = "static/Group 182.png" id="bottomright">
-    <select name="language" id="language">
+    <img src = "static/Ellipse 53.png" id="ellipse1">
+    <img src = "static/Ellipse 50.png" id="ellipse2">
+    <select name="language" id="language" onchange="window.location.href=this.value;" size="4">
      <option value="Language">Language</option>
      <option value="Chinese">Chinese</option>
-     <option value="French">French</option>
+     <option value="https://HearAssist.akanshaaaaa.repl.co/fr">French</option>
      <option value="German">German</option>
      <option value="Hindi">Hindi</option>
      <option value="Japnese">Japnese</option>
@@ -226,6 +264,6 @@
     </select>
     <button type="button" id= start>Get Started</button>
     <button type="button" id= help>Help</button>
-    <div id="textbox"></div>
+    <div id="textbox"><br> {{ obj }} </div>
   </body>
 </html>
