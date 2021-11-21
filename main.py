@@ -39,4 +39,20 @@ def fr():
 def ge():
   return render_template('index.html', obj = translate_text("de", db['text']))
 
+@app.route('/cn', methods = ['GET'])
+def cn():
+  return render_template('index.html', obj = translate_text("zh-cn", db['text']))
+
+@app.route('/hi', methods = ['GET'])
+def hi():
+  return render_template('index.html', obj = translate_text("hi", db['text']))
+
+@app.route('/jp', methods = ['GET'])
+def jp():
+  return render_template('index.html', obj = translate_text("ja", db['text']))
+
+@app.route('/ru', methods = ['GET'])
+def ru():
+  return render_template('index.html', obj = translate_text("ru", db['text']))
+
 app.run(host='0.0.0.0', port=8080)
